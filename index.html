@@ -92,12 +92,9 @@ h2{font-family:var(--serif);font-size:2.5rem;font-weight:400;margin-bottom:.75re
 #capture{background:var(--terra);color:var(--warm);text-align:center;padding:5rem 4rem}
 #capture h2{color:var(--warm);font-family:var(--serif);font-size:2.2rem;font-weight:400;margin-bottom:.75rem}
 #capture p{color:rgba(245,240,232,.85);font-size:.95rem;max-width:500px;margin:0 auto 2rem}
-.capture-form{display:flex;max-width:480px;margin:0 auto}
-.capture-form input{flex:1;padding:.85rem 1.25rem;border:none;font-family:var(--sans);font-size:.875rem;background:rgba(255,255,255,.2);color:var(--warm);outline:none}
-.capture-form input::placeholder{color:rgba(245,240,232,.55)}
-.capture-form button{padding:.85rem 1.5rem;background:var(--stone);color:var(--warm);border:none;font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
-.capture-form button:hover{background:#1a1714}
-.capture-note{font-size:.75rem;color:rgba(245,240,232,.5);margin-top:.75rem}
+.capture-btn{display:inline-block;padding:.85rem 2.5rem;background:var(--stone);color:var(--warm);text-decoration:none;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s;margin-top:.5rem}
+.capture-btn:hover{background:#1a1714}
+.capture-note{font-size:.75rem;color:rgba(245,240,232,.5);margin-top:1rem}
 #contact{background:#fff;text-align:center}
 #contact h2{font-family:var(--serif);font-size:2.8rem;font-weight:400;margin-bottom:1rem}
 .contact-body{color:var(--mid);font-size:.95rem;max-width:480px;margin:0 auto 2.5rem}
@@ -119,7 +116,6 @@ footer{background:var(--stone);color:rgba(245,240,232,.4);text-align:center;padd
   .phil-grid{grid-template-columns:repeat(2,1fr)}
   .negreira-grid,.about-grid{grid-template-columns:1fr}
   .negreira-img{aspect-ratio:16/9}
-  .capture-form{flex-direction:column}
 }
 </style>
 </head>
@@ -284,11 +280,8 @@ footer{background:var(--stone);color:rgba(245,240,232,.4);text-align:center;padd
   <span class="lbl" style="color:rgba(245,240,232,.6)" data-en="Free resource" data-es="Recurso gratuito">Free resource</span>
   <h2 data-en="Buying in Galicia? Start with this." data-es="¿Comprando en Galicia? Empieza aquí.">Buying in Galicia? Start with this.</h2>
   <p data-en="Download the free Galicia Property Buyer's Checklist — 25 questions to ask before you make an offer, written by a UK architect based in Negreira." data-es="Descarga la lista de verificación gratuita para compradores en Galicia — 25 preguntas que debes hacer antes de hacer una oferta, escrita por un arquitecto británico en Negreira.">Download the free Galicia Property Buyer's Checklist — 25 questions to ask before you make an offer, written by a UK architect based in Negreira.</p>
-  <div class="capture-form">
-    <input type="email" id="capture-email" placeholder="Your email address">
-    <button onclick="submitCapture()" data-en="Download free guide →" data-es="Descargar guía gratuita →">Download free guide →</button>
-  </div>
-  <p class="capture-note" data-en="No spam. Unsubscribe any time." data-es="Sin spam. Darse de baja en cualquier momento.">No spam. Unsubscribe any time.</p>
+  <a href="https://raw.githubusercontent.com/Luka-Morris/lukamorrisarchitects/main/galicia_buyers_checklist.pdf" target="_blank" class="capture-btn" data-en="Download free guide →" data-es="Descargar guía gratuita →">Download free guide →</a>
+  <p class="capture-note" data-en="PDF — no sign-up required" data-es="PDF — sin registro">PDF — no sign-up required</p>
 </section>
 
 <section id="contact">
@@ -326,12 +319,6 @@ function toggleLang(){
   document.documentElement.lang=lang;
 }
 
-function submitCapture(){
-  var email=document.getElementById('capture-email').value;
-  if(!email||email.indexOf('@')===-1){alert('Please enter a valid email address.');return;}
-  alert('Thank you! The checklist will be sent to '+email+' shortly.');
-  document.getElementById('capture-email').value='';
-}
 </script>
 </body>
 </html>
