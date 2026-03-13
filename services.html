@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services &amp; Fees — Luka Morris Architects</title>
+<meta name="description" content="Full breakdown of services and fixed fees — pre-purchase surveys, design, project management, planning and remote consultancy for rural properties in Galicia and Asturias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --stone:#2c2825;
+  --warm:#f5f0e8;
+  --terra:#a0522d;
+  --mid:#8a7f72;
+  --line:#d8cfc4;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--warm);color:var(--stone);font-family:var(--sans);font-weight:300}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:var(--warm);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:500;letter-spacing:.02em;text-decoration:none;color:var(--stone)}
+.nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--stone);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-links a.active{opacity:1;border-bottom:1px solid var(--terra);padding-bottom:.1rem}
+.lang-btn{background:none;border:1px solid var(--line);padding:.3rem .7rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;cursor:pointer;color:var(--stone);text-transform:uppercase;transition:all .2s}
+.lang-btn:hover{background:var(--stone);color:var(--warm)}
+
+/* HERO */
+.page-hero{padding:10rem 4rem 5rem;border-bottom:1px solid var(--line)}
+.lbl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;display:block}
+h1{font-family:var(--serif);font-size:3.5rem;font-weight:400;line-height:1.1;margin-bottom:1.25rem}
+.hero-sub{font-size:1rem;line-height:1.7;color:var(--mid);max-width:560px}
+
+/* INTRO STRIP */
+.intro-strip{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
+.intro-item{padding:2.5rem 4rem;border-right:1px solid var(--line)}
+.intro-item:last-child{border-right:none}
+.intro-item h3{font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.5rem}
+.intro-item p{font-size:.85rem;line-height:1.7;color:var(--mid)}
+
+/* SECTIONS */
+section{padding:5rem 4rem}
+section+section{border-top:1px solid var(--line)}
+.section-header{display:grid;grid-template-columns:1fr 2fr;gap:4rem;margin-bottom:4rem;align-items:start}
+.section-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:.75rem;display:block}
+h2{font-family:var(--serif);font-size:2.4rem;font-weight:400;line-height:1.15}
+.section-intro{font-size:.95rem;line-height:1.75;color:var(--mid)}
+
+/* SERVICE BLOCKS */
+.service-block{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);margin-bottom:2rem}
+.service-block:last-of-type{margin-bottom:0}
+.service-main{padding:2.5rem;border-right:1px solid var(--line)}
+.service-fees{padding:2.5rem;background:#fff}
+.service-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:.75rem;display:block}
+.service-block h3{font-family:var(--serif);font-size:1.6rem;font-weight:400;margin-bottom:1rem}
+.service-desc{font-size:.9rem;line-height:1.75;color:var(--mid);margin-bottom:1.5rem}
+.service-includes{list-style:none;margin-bottom:1.5rem}
+.service-includes li{font-size:.85rem;line-height:1.6;color:var(--mid);padding:.3rem 0;padding-left:1rem;position:relative}
+.service-includes li::before{content:'—';position:absolute;left:0;color:var(--terra)}
+.fee-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.5rem;display:block;margin-top:1.5rem}
+.fee-label:first-child{margin-top:0}
+.fee-amount{font-family:var(--serif);font-size:1.8rem;font-weight:400;color:var(--stone);line-height:1.1;margin-bottom:.25rem}
+.fee-note{font-size:.8rem;color:var(--mid);line-height:1.5}
+.fee-divider{border:none;border-top:1px solid var(--line);margin:1.5rem 0}
+
+/* PACKAGE TABLE */
+.pkg-table{width:100%;border-collapse:collapse;margin-top:1rem}
+.pkg-table th{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);font-weight:400;text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line)}
+.pkg-table td{font-size:.875rem;padding:.9rem .75rem;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.pkg-table tr:last-child td{border-bottom:none}
+.pkg-table td:first-child{font-weight:500;color:var(--stone);white-space:nowrap}
+.pkg-table td:nth-child(2){color:var(--mid);font-size:.82rem}
+.pkg-table td:last-child{color:var(--terra);font-weight:500;white-space:nowrap;text-align:right}
+.pkg-table tr:hover td{background:rgba(160,82,45,.04)}
+
+/* CTA BAND */
+.cta-band{background:var(--stone);color:var(--warm);padding:4rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.cta-band h2{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--warm);margin-bottom:.5rem}
+.cta-band p{font-size:.9rem;color:rgba(245,240,232,.65);max-width:480px}
+.btn{display:inline-block;padding:.85rem 2rem;background:var(--terra);color:var(--warm);text-decoration:none;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s;border:none;cursor:pointer;font-family:var(--sans);white-space:nowrap}
+.btn:hover{background:#8a4225}
+.btn-outline{background:transparent;border:1px solid rgba(245,240,232,.3);color:var(--warm)}
+.btn-outline:hover{background:rgba(245,240,232,.1)}
+
+/* RESOURCES PLACEHOLDER */
+.resources{background:#fff;padding:5rem 4rem;border-top:1px solid var(--line)}
+.resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.resource-card{border:1px dashed var(--line);padding:2rem;opacity:.6}
+.resource-card .rc-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.75rem;display:block}
+.resource-card h4{font-family:var(--serif);font-size:1.2rem;font-weight:400;margin-bottom:.5rem;color:var(--stone)}
+.resource-card p{font-size:.82rem;line-height:1.6;color:var(--mid)}
+.coming-soon{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);border:1px solid var(--line);padding:.25rem .6rem;margin-top:.75rem}
+
+/* FOOTER */
+footer{background:var(--stone);color:rgba(245,240,232,.4);text-align:center;padding:1.5rem;font-size:.75rem;letter-spacing:.06em}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .page-hero{padding:7rem 1.5rem 3rem}
+  h1{font-size:2.4rem}
+  .intro-strip{grid-template-columns:1fr}
+  .intro-item{padding:1.5rem;border-right:none;border-bottom:1px solid var(--line)}
+  .intro-item:last-child{border-bottom:none}
+  section{padding:3.5rem 1.5rem}
+  .section-header{grid-template-columns:1fr}
+  .service-block{grid-template-columns:1fr}
+  .service-main{border-right:none;border-bottom:1px solid var(--line)}
+  .cta-band{grid-template-columns:1fr;padding:3rem 1.5rem;gap:1.5rem}
+  .resources{padding:3.5rem 1.5rem}
+  .resources-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo" data-en="Luka Morris Architects" data-es="Luka Morris Arquitectos">Luka Morris Architects</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services" data-en="Services" data-es="Servicios">Services</a></li>
+    <li><a href="services.html" class="active" data-en="Fees" data-es="Honorarios">Fees</a></li>
+    <li><a href="index.html#work" data-en="Work" data-es="Proyectos">Work</a></li>
+    <li><a href="index.html#negreira" data-en="Casa Negreira" data-es="Casa Negreira">Casa Negreira</a></li>
+    <li><a href="index.html#about" data-en="About" data-es="Sobre mí">About</a></li>
+    <li><a href="index.html#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+    <li><button class="lang-btn" id="langBtn" onclick="toggleLang()">ES</button></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <span class="lbl" data-en="Transparent pricing" data-es="Honorarios transparentes">Transparent pricing</span>
+  <h1 data-en="Services &amp; Fees" data-es="Servicios y Honorarios">Services &amp; Fees</h1>
+  <p class="hero-sub" data-en="All fees are fixed and agreed upfront — no surprises, no hourly rates. Every service is delivered in English, with clear written outputs. On-site fees are quoted in EUR; remote services are quoted in both GBP and EUR." data-es="Todos los honorarios son fijos y acordados por adelantado — sin sorpresas, sin tarifas por hora. Todos los servicios se prestan en inglés, con resultados escritos claros. Los servicios presenciales se cotizan en EUR; los servicios remotos se cotizan en GBP y EUR.">All fees are fixed and agreed upfront — no surprises, no hourly rates. Every service is delivered in English, with clear written outputs. On-site fees are quoted in EUR; remote services are quoted in both GBP and EUR.</p>
+</div>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-item">
+    <h3 data-en="Fixed fees" data-es="Honorarios fijos">Fixed fees</h3>
+    <p data-en="Every engagement is priced upfront. You know the cost before work begins." data-es="Cada encargo tiene un precio acordado de antemano. Conoce el coste antes de que comience el trabajo.">Every engagement is priced upfront. You know the cost before work begins.</p>
+  </div>
+  <div class="intro-item">
+    <h3 data-en="Plain English" data-es="Inglés claro">Plain English</h3>
+    <p data-en="All reports, calls, and correspondence delivered in English. Spanish available on request." data-es="Todos los informes, llamadas y correspondencia en inglés. Español disponible bajo petición.">All reports, calls, and correspondence delivered in English. Spanish available on request.</p>
+  </div>
+  <div class="intro-item">
+    <h3 data-en="No obligation first call" data-es="Primera llamada sin compromiso">No obligation first call</h3>
+    <p data-en="Book a free 20-minute introductory call before committing to any service." data-es="Reserve una llamada introductoria gratuita de 20 minutos antes de comprometerse con cualquier servicio.">Book a free 20-minute introductory call before committing to any service.</p>
+  </div>
+</div>
+
+<!-- ON-SITE SERVICES -->
+<section id="onsite">
+  <div class="section-header">
+    <div>
+      <span class="section-label" data-en="On-site services" data-es="Servicios presenciales">On-site services</span>
+      <h2 data-en="In Galicia &amp; Asturias" data-es="En Galicia y Asturias">In Galicia &amp; Asturias</h2>
+    </div>
+    <p class="section-intro" data-en="For clients buying, renovating, or managing a property in Galicia or Asturias. All on-site services involve physical visits to the property and are carried out in the region. Fees are quoted in EUR. GBP equivalents are approximate and subject to exchange rate at time of engagement." data-es="Para clientes que compran, reforman o gestionan una propiedad en Galicia o Asturias. Todos los servicios presenciales implican visitas físicas a la propiedad. Los honorarios se cotizan en EUR.">For clients buying, renovating, or managing a property in Galicia or Asturias. All on-site services involve physical visits to the property and are carried out in the region. Fees are quoted in EUR. GBP equivalents are approximate and subject to exchange rate at time of engagement.</p>
+  </div>
+
+  <!-- Pre-Purchase Survey -->
+  <div class="service-block">
+    <div class="service-main">
+      <span class="service-tag" data-en="Pre-Purchase" data-es="Previa a la Compra">Pre-Purchase</span>
+      <h3 data-en="Pre-Purchase Survey" data-es="Informe Previo a la Compra">Pre-Purchase Survey</h3>
+      <p class="service-desc" data-en="An independent structural and condition assessment of the property before you commit to a purchase. I visit the site, inspect the building, and produce a written report in English covering structural risks, condition issues, estimated remediation costs, and planning constraints. Designed specifically for international buyers who cannot easily be on the ground." data-es="Una evaluación estructural e independiente de la propiedad antes de comprometerse con la compra. Visito el inmueble, inspecciono el edificio y elaboro un informe escrito en inglés sobre riesgos estructurales, estado del edificio, costes estimados de rehabilitación y restricciones urbanísticas.">An independent structural and condition assessment of the property before you commit to a purchase. I visit the site, inspect the building, and produce a written report in English covering structural risks, condition issues, estimated remediation costs, and planning constraints. Designed specifically for international buyers who cannot easily be on the ground.</p>
+      <ul class="service-includes">
+        <li data-en="Site visit and full building inspection" data-es="Visita al inmueble e inspección completa del edificio">Site visit and full building inspection</li>
+        <li data-en="Written report in English (typically 8–12 pages)" data-es="Informe escrito en inglés (normalmente 8–12 páginas)">Written report in English (typically 8–12 pages)</li>
+        <li data-en="Structural risk assessment" data-es="Evaluación del riesgo estructural">Structural risk assessment</li>
+        <li data-en="Condition notes with photographs" data-es="Notas sobre el estado con fotografías">Condition notes with photographs</li>
+        <li data-en="Estimated remediation costs" data-es="Estimación de costes de rehabilitación">Estimated remediation costs</li>
+        <li data-en="Planning constraints summary" data-es="Resumen de restricciones urbanísticas">Planning constraints summary</li>
+        <li data-en="Follow-up call to discuss findings" data-es="Llamada de seguimiento para comentar los resultados">Follow-up call to discuss findings</li>
+      </ul>
+    </div>
+    <div class="service-fees">
+      <span class="fee-label" data-en="Standard fee" data-es="Honorario estándar">Standard fee</span>
+      <div class="fee-amount">€350 <span style="font-size:1.1rem;color:var(--mid)">/ £300</span></div>
+      <p class="fee-note" data-en="Within 30km of Negreira. Report delivered within 5 working days of site visit." data-es="En un radio de 30 km de Negreira. Informe entregado en 5 días hábiles tras la visita.">Within 30km of Negreira. Report delivered within 5 working days of site visit.</p>
+      <hr class="fee-divider">
+      <span class="fee-label" data-en="Extended area" data-es="Área extendida">Extended area</span>
+      <div class="fee-amount">€450 <span style="font-size:1.1rem;color:var(--mid)">/ £385</span></div>
+      <p class="fee-note" data-en="30–90km from Negreira (covers most of Galicia and western Asturias)." data-es="30–90 km de Negreira (cubre la mayor parte de Galicia y el oeste de Asturias).">30–90km from Negreira (covers most of Galicia and western Asturias).</p>
+      <hr class="fee-divider">
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" style="display:block;text-align:center;margin-top:.5rem" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+    </div>
+  </div>
+
+  <!-- Design & Consultancy -->
+  <div class="service-block">
+    <div class="service-main">
+      <span class="service-tag">Design</span>
+      <h3 data-en="Design &amp; Consultancy" data-es="Diseño y Consultoría">Design &amp; Consultancy</h3>
+      <p class="service-desc" data-en="Feasibility studies, spatial planning, and design proposals for rural properties in Galicia and Asturias. Whether you are assessing the potential of a purchase or developing proposals for a property you already own, this service provides an architect's analysis and a clear design direction before committing to a full project." data-es="Estudios de viabilidad, planificación espacial y propuestas de diseño para propiedades rurales en Galicia y Asturias. Ya sea que esté evaluando el potencial de una compra o desarrollando propuestas para una propiedad que ya posee.">Feasibility studies, spatial planning, and design proposals for rural properties in Galicia and Asturias. Whether you are assessing the potential of a purchase or developing proposals for a property you already own, this service provides an architect's analysis and a clear design direction before committing to a full project.</p>
+      <ul class="service-includes">
+        <li data-en="Site visit and measured survey" data-es="Visita al inmueble y levantamiento métrico">Site visit and measured survey</li>
+        <li data-en="Feasibility assessment" data-es="Estudio de viabilidad">Feasibility assessment</li>
+        <li data-en="Spatial planning options" data-es="Opciones de planificación espacial">Spatial planning options</li>
+        <li data-en="Design proposals with drawings" data-es="Propuestas de diseño con planos">Design proposals with drawings</li>
+        <li data-en="Material and specification guidance" data-es="Orientación sobre materiales y especificaciones">Material and specification guidance</li>
+        <li data-en="Written summary report in English" data-es="Informe resumen escrito en inglés">Written summary report in English</li>
+      </ul>
+    </div>
+    <div class="service-fees">
+      <span class="fee-label" data-en="Feasibility study" data-es="Estudio de viabilidad">Feasibility study</span>
+      <div class="fee-amount">€800 <span style="font-size:1.1rem;color:var(--mid)">/ £685</span></div>
+      <p class="fee-note" data-en="Single site visit, written feasibility assessment, and summary of design options." data-es="Una visita al inmueble, evaluación de viabilidad escrita y resumen de opciones de diseño.">Single site visit, written feasibility assessment, and summary of design options.</p>
+      <hr class="fee-divider">
+      <span class="fee-label" data-en="Full design stage" data-es="Fase de diseño completo">Full design stage</span>
+      <div class="fee-amount">€1,800 <span style="font-size:1.1rem;color:var(--mid)">/ £1,540</span></div>
+      <p class="fee-note" data-en="Multiple visits, developed design proposals, drawings, and specification guidance. Fees for planning submission (licencia) are quoted separately." data-es="Múltiples visitas, propuestas de diseño desarrolladas, planos y orientación sobre especificaciones. Los honorarios para la presentación de licencias se cotizan por separado.">Multiple visits, developed design proposals, drawings, and specification guidance. Fees for planning submission are quoted separately.</p>
+      <hr class="fee-divider">
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" style="display:block;text-align:center;margin-top:.5rem" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+    </div>
+  </div>
+
+  <!-- Project Management -->
+  <div class="service-block">
+    <div class="service-main">
+      <span class="service-tag" data-en="On-Site" data-es="Presencial">On-Site</span>
+      <h3 data-en="Project Management" data-es="Gestión de Proyectos">Project Management</h3>
+      <p class="service-desc" data-en="On-the-ground oversight of your renovation or construction project. I act as your representative on site — managing local contractors, controlling the programme, monitoring quality, and reporting to you in English on a regular basis. Suited to clients based in the UK or elsewhere who cannot be present during construction." data-es="Supervisión sobre el terreno de su proyecto de rehabilitación o construcción. Actuó como su representante en la obra — gestionando los contratistas locales, controlando el programa, supervisando la calidad e informándole en inglés de forma regular.">On-the-ground oversight of your renovation or construction project. I act as your representative on site — managing local contractors, controlling the programme, monitoring quality, and reporting to you in English on a regular basis. Suited to clients based in the UK or elsewhere who cannot be present during construction.</p>
+      <ul class="service-includes">
+        <li data-en="Regular site visits (frequency agreed per project)" data-es="Visitas periódicas a la obra (frecuencia acordada por proyecto)">Regular site visits (frequency agreed per project)</li>
+        <li data-en="Contractor briefing and management" data-es="Instrucción y gestión de contratistas">Contractor briefing and management</li>
+        <li data-en="Budget monitoring and cost reporting" data-es="Seguimiento del presupuesto e informes de costes">Budget monitoring and cost reporting</li>
+        <li data-en="Programme tracking" data-es="Seguimiento del programa">Programme tracking</li>
+        <li data-en="Monthly written progress report in English" data-es="Informe mensual de progreso escrito en inglés">Monthly written progress report in English</li>
+        <li data-en="Issue management and problem resolution" data-es="Gestión de incidencias y resolución de problemas">Issue management and problem resolution</li>
+      </ul>
+    </div>
+    <div class="service-fees">
+      <span class="fee-label" data-en="Monthly retainer" data-es="Honorario mensual">Monthly retainer</span>
+      <div class="fee-amount">€400 <span style="font-size:1.1rem;color:var(--mid)">/ £340</span></div>
+      <p class="fee-note" data-en="Per month, covering up to two site visits and one written progress report. Additional visits quoted at €100/visit." data-es="Al mes, cubriendo hasta dos visitas a la obra y un informe de progreso escrito. Visitas adicionales cotizadas a €100/visita.">Per month, covering up to two site visits and one written progress report. Additional visits quoted at €100/visit.</p>
+      <hr class="fee-divider">
+      <span class="fee-label" data-en="Minimum term" data-es="Plazo mínimo">Minimum term</span>
+      <div class="fee-amount" style="font-size:1.3rem" data-en="3 months" data-es="3 meses">3 months</div>
+      <p class="fee-note" data-en="Engagements are reviewed monthly and can be extended or concluded at the end of any month." data-es="Los encargos se revisan mensualmente y pueden ampliarse o concluirse al final de cualquier mes.">Engagements are reviewed monthly and can be extended or concluded at the end of any month.</p>
+      <hr class="fee-divider">
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" style="display:block;text-align:center;margin-top:.5rem" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+    </div>
+  </div>
+
+  <!-- Planning -->
+  <div class="service-block">
+    <div class="service-main">
+      <span class="service-tag" data-en="Regulatory" data-es="Normativa">Regulatory</span>
+      <h3 data-en="Planning &amp; Licencias" data-es="Planificación y Licencias">Planning &amp; Licencias</h3>
+      <p class="service-desc" data-en="Navigating the Spanish planning system for works requiring a licencia de obras. I coordinate with local aparejadores and partner arquitectos to handle the statutory submission, managing the process on your behalf and explaining each stage in English. The licencia de obras is a mandatory requirement for most renovation works in Spain and must be obtained before works begin." data-es="Navegación por el sistema urbanístico español para obras que requieren licencia de obras. Coordino con aparejadores locales y arquitectos colaboradores para gestionar la tramitación oficial, gestionando el proceso en su nombre y explicando cada fase en inglés.">Navigating the Spanish planning system for works requiring a licencia de obras. I coordinate with local aparejadores and partner arquitectos to handle the statutory submission, managing the process on your behalf and explaining each stage in English. The licencia de obras is a mandatory requirement for most renovation works in Spain and must be obtained before works begin.</p>
+      <ul class="service-includes">
+        <li data-en="Planning strategy note (correct licencia type, documents required, timescales)" data-es="Nota de estrategia urbanística (tipo correcto de licencia, documentos necesarios, plazos)">Planning strategy note</li>
+        <li data-en="Coordination with aparejador and partner arquitecto" data-es="Coordinación con aparejador y arquitecto colaborador">Coordination with aparejador and partner arquitecto</li>
+        <li data-en="Document preparation and submission management" data-es="Preparación de documentos y gestión de la tramitación">Document preparation and submission management</li>
+        <li data-en="Liaison with the local Concello" data-es="Coordinación con el Concello local">Liaison with the local Concello</li>
+        <li data-en="Progress updates in English throughout" data-es="Actualizaciones de progreso en inglés durante todo el proceso">Progress updates in English throughout</li>
+      </ul>
+    </div>
+    <div class="service-fees">
+      <span class="fee-label" data-en="Obra menor (minor works)" data-es="Obra menor">Obra menor (minor works)</span>
+      <div class="fee-amount">€500 <span style="font-size:1.1rem;color:var(--mid)">/ £428</span></div>
+      <p class="fee-note" data-en="Internal works, repairs, window/door replacements. Includes coordination with aparejador." data-es="Obras internas, reparaciones, sustitución de ventanas/puertas. Incluye coordinación con aparejador.">Internal works, repairs, window/door replacements. Includes coordination with aparejador.</p>
+      <hr class="fee-divider">
+      <span class="fee-label" data-en="Obra mayor (major works)" data-es="Obra mayor">Obra mayor (major works)</span>
+      <div class="fee-amount">€900 <span style="font-size:1.1rem;color:var(--mid)">/ £770</span></div>
+      <p class="fee-note" data-en="Full rehabilitation, structural works, extensions. Requires full project signed by arquitecto — coordination and management fee only; arquitecto fees are additional." data-es="Rehabilitación completa, obras estructurales, ampliaciones. Requiere proyecto completo firmado por arquitecto — solo honorarios de coordinación y gestión; los honorarios del arquitecto son adicionales.">Full rehabilitation, structural works, extensions. Arquitecto fees are additional and quoted separately.</p>
+      <hr class="fee-divider">
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" style="display:block;text-align:center;margin-top:.5rem" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- REMOTE SERVICES -->
+<section id="remote" style="background:#fff">
+  <div class="section-header">
+    <div>
+      <span class="section-label" data-en="Remote services" data-es="Servicios remotos">Remote services</span>
+      <h2 data-en="From anywhere in the UK or Europe" data-es="Desde cualquier lugar del Reino Unido o Europa">From anywhere in the UK or Europe</h2>
+    </div>
+    <p class="section-intro" data-en="For clients who are based in the UK or abroad and cannot easily travel to Galicia. All remote services are delivered via video call, with written outputs sent by email. No travel required on your part. Fixed fees in both GBP and EUR — pay in whichever currency suits you." data-es="Para clientes con sede en el Reino Unido o en el extranjero que no pueden viajar fácilmente a Galicia. Todos los servicios remotos se prestan por videollamada, con resultados escritos enviados por correo electrónico. Honorarios fijos en GBP y EUR.">For clients who are based in the UK or abroad and cannot easily travel to Galicia. All remote services are delivered via video call, with written outputs sent by email. No travel required on your part. Fixed fees in both GBP and EUR — pay in whichever currency suits you.</p>
+  </div>
+
+  <table class="pkg-table">
+    <thead>
+      <tr>
+        <th data-en="Package" data-es="Paquete">Package</th>
+        <th data-en="What's included" data-es="Qué incluye">What's included</th>
+        <th data-en="Fee" data-es="Honorario">Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-en="Sense Check" data-es="Consulta Inicial">Sense Check</td>
+        <td data-en="One-hour video call covering your specific project or property. Written summary of key risks, recommended actions, and next steps sent within 2 working days." data-es="Videollamada de una hora sobre su proyecto o propiedad. Resumen escrito de los riesgos clave, acciones recomendadas y próximos pasos en 2 días hábiles.">One-hour video call covering your specific project or property. Written summary of key risks, recommended actions, and next steps sent within 2 working days.</td>
+        <td>£150 / €175</td>
+      </tr>
+      <tr>
+        <td data-en="Quote Audit" data-es="Revisión de Presupuesto">Quote Audit</td>
+        <td data-en="Professional review of a contractor quote — identifying gaps, anomalies, missing items, and areas to negotiate. Written report with annotated findings." data-es="Revisión profesional de un presupuesto de contratista — identificando lagunas, anomalías, partidas ausentes y áreas de negociación. Informe escrito con conclusiones anotadas.">Professional review of a contractor quote — identifying gaps, anomalies, missing items, and areas to negotiate. Written report with annotated findings.</td>
+        <td>£350 / €410</td>
+      </tr>
+      <tr>
+        <td data-en="Planning Ready" data-es="Preparación para Licencia">Planning Ready</td>
+        <td data-en="Review of your project scope and a written planning strategy note — covering the correct licencia type, documents required, approximate timescales, and likely costs." data-es="Revisión del alcance de su proyecto y nota de estrategia urbanística — cubriendo el tipo correcto de licencia, documentos necesarios, plazos aproximados y costes probables.">Review of your project scope and a written planning strategy note — covering the correct licencia type, documents required, approximate timescales, and likely costs.</td>
+        <td>£500 / €585</td>
+      </tr>
+      <tr>
+        <td data-en="Renovation Roadmap" data-es="Hoja de Ruta de Rehabilitación">Renovation Roadmap</td>
+        <td data-en="A complete phased scope of works for your renovation — sequenced by trade, with procurement guidance and a brief suitable for tendering to local contractors. Based on your survey, drawings, or photographs." data-es="Un alcance de obras completo y por fases para su rehabilitación — secuenciado por gremios, con orientación sobre contratación y un brief adecuado para licitar a contratistas locales.">A complete phased scope of works — sequenced by trade, with procurement guidance and a brief suitable for tendering to local contractors.</td>
+        <td>£1,200 / €1,400</td>
+      </tr>
+      <tr>
+        <td data-en="Monthly Retainer" data-es="Contrato Mensual">Monthly Retainer</td>
+        <td data-en="Ongoing monthly advisory for active renovation projects. Four video calls per month plus async support via email. Suited to clients managing a live project from the UK." data-es="Asesoramiento mensual continuo para proyectos de rehabilitación en curso. Cuatro videollamadas al mes más soporte asíncrono por correo electrónico.">Ongoing monthly advisory. Four video calls per month plus async email support. For clients managing a live project from the UK.</td>
+        <td>£400 / €465</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:2rem;padding:1.5rem;border:1px solid var(--line);background:var(--warm)">
+    <p style="font-size:.85rem;line-height:1.7;color:var(--mid)" data-en="Not sure which package fits your situation? Book a free 20-minute introductory call and I will recommend the right starting point." data-es="¿No está seguro de qué paquete se adapta a su situación? Reserve una llamada introductoria gratuita de 20 minutos y le recomendaré el punto de partida adecuado.">Not sure which package fits your situation? Book a free 20-minute introductory call and I will recommend the right starting point.</p>
+    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" style="display:inline-block;margin-top:1rem" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div>
+    <h2 data-en="Not sure where to start?" data-es="¿No sabe por dónde empezar?">Not sure where to start?</h2>
+    <p data-en="Book a free 20-minute introductory call. No obligation, no sales pitch — just a straight conversation about your property and what you need." data-es="Reserve una llamada introductoria gratuita de 20 minutos. Sin compromiso, sin presiones — solo una conversación directa sobre su propiedad y lo que necesita.">Book a free 20-minute introductory call. No obligation, no sales pitch — just a straight conversation about your property and what you need.</p>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:.75rem">
+    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+    <a href="index.html#contact" class="btn btn-outline" data-en="Send an email →" data-es="Enviar un correo →">Send an email →</a>
+  </div>
+</div>
+
+<!-- RESOURCES PLACEHOLDER -->
+<div class="resources">
+  <span class="lbl" data-en="Resources" data-es="Recursos">Resources</span>
+  <h2 data-en="Guides &amp; Templates" data-es="Guías y Plantillas">Guides &amp; Templates</h2>
+  <p style="color:var(--mid);font-size:.95rem;margin-top:.5rem;max-width:520px" data-en="Practical resources for international buyers and property owners in Galicia and Asturias. More titles in development." data-es="Recursos prácticos para compradores internacionales y propietarios en Galicia y Asturias. Más títulos en desarrollo.">Practical resources for international buyers and property owners in Galicia and Asturias. More titles in development.</p>
+
+  <div class="resources-grid">
+    <div class="resource-card">
+      <span class="rc-tag">Free guide</span>
+      <h4 data-en="Galicia Property Buyer's Checklist" data-es="Lista de Verificación para Compradores">Galicia Property Buyer's Checklist</h4>
+      <p data-en="25 questions to ask before you make an offer on a rural property in Galicia or Asturias." data-es="25 preguntas que debes hacer antes de hacer una oferta por una propiedad rural en Galicia o Asturias.">25 questions to ask before you make an offer on a rural property in Galicia or Asturias.</p>
+      <a href="https://raw.githubusercontent.com/Luka-Morris/lukamorrisarchitects/main/galicia_buyers_checklist.pdf" target="_blank" class="btn" style="display:inline-block;margin-top:1rem;font-size:.75rem;padding:.6rem 1.25rem" data-en="Download free →" data-es="Descargar gratis →">Download free →</a>
+    </div>
+    <div class="resource-card">
+      <span class="rc-tag" data-en="Coming soon" data-es="Próximamente">Coming soon</span>
+      <h4 data-en="Contractor Vetting Checklist" data-es="Lista de Verificación de Contratistas">Contractor Vetting Checklist</h4>
+      <p data-en="How to assess, brief, and appoint local contractors in Galicia. Questions to ask, red flags to watch for, and what to include in a written agreement." data-es="Cómo evaluar, informar y contratar contratistas locales en Galicia. Preguntas que hacer, señales de alerta y qué incluir en un acuerdo escrito.">How to assess, brief, and appoint local contractors in Galicia. Questions to ask, red flags to watch for, and what to include in a written agreement.</p>
+      <span class="coming-soon" data-en="In development" data-es="En desarrollo">In development</span>
+    </div>
+    <div class="resource-card">
+      <span class="rc-tag" data-en="Coming soon" data-es="Próximamente">Coming soon</span>
+      <h4 data-en="Spanish Planning Guide" data-es="Guía de Planificación Española">Spanish Planning Guide</h4>
+      <p data-en="A plain-English walkthrough of the licencia de obras process in Galicia — types, documents, timescales, costs, and how to avoid common delays." data-es="Una guía en inglés claro del proceso de licencia de obras en Galicia — tipos, documentos, plazos, costes y cómo evitar retrasos habituales.">A plain-English walkthrough of the licencia de obras process in Galicia — types, documents, timescales, costs, and how to avoid common delays.</p>
+      <span class="coming-soon" data-en="In development" data-es="En desarrollo">In development</span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span data-en="© 2026 Luka Morris Architects · ARB Registered · Negreira, Galicia · Serving Galicia &amp; Asturias" data-es="© 2026 Luka Morris Arquitectos · Certificado ARB · Negreira, Galicia · Galicia y Asturias">© 2026 Luka Morris Architects · ARB Registered · Negreira, Galicia · Serving Galicia &amp; Asturias</span>
+</footer>
+
+<script>
+var lang='en';
+function toggleLang(){
+  lang=lang==='en'?'es':'en';
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    el.innerHTML=el.getAttribute('data-'+lang);
+  });
+  document.getElementById('langBtn').textContent=lang==='en'?'ES':'EN';
+  document.documentElement.lang=lang;
+}
+</script>
+</body>
+</html>
