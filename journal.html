@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Journal — Luka Morris Architects</title>
+<meta name="description" content="Guides, observations, and notes on rural architecture in Galicia and Asturias. Written by a UK architect based in Negreira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --stone:#2c2825;
+  --warm:#f5f0e8;
+  --terra:#a0522d;
+  --mid:#8a7f72;
+  --line:#d8cfc4;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--warm);color:var(--stone);font-family:var(--sans);font-weight:300}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:var(--warm);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:500;letter-spacing:.02em;text-decoration:none;color:var(--stone)}
+.nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--stone);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7;transition:opacity .2s}
+.nav-links a:hover,.nav-links a.active{opacity:1}
+.nav-links a.active{border-bottom:1px solid var(--terra);padding-bottom:.1rem}
+.lang-btn{background:none;border:1px solid var(--line);padding:.3rem .7rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;cursor:pointer;color:var(--stone);text-transform:uppercase;transition:all .2s}
+.lang-btn:hover{background:var(--stone);color:var(--warm)}
+
+.page-hero{padding:10rem 4rem 4rem;border-bottom:1px solid var(--line)}
+.lbl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;display:block}
+h1{font-family:var(--serif);font-size:3.2rem;font-weight:400;margin-bottom:.75rem}
+.hero-sub{font-size:.95rem;line-height:1.7;color:var(--mid);max-width:500px}
+
+.posts-wrap{max-width:860px;margin:0 auto;padding:4rem 4rem 6rem}
+
+.post-card{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;padding:2.5rem 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;transition:opacity .2s}
+.post-card:first-child{padding-top:0}
+.post-card:last-child{border-bottom:none}
+.post-card:hover{opacity:.75}
+
+.card-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:.6rem;display:block}
+.card-title{font-family:var(--serif);font-size:1.7rem;font-weight:400;line-height:1.2;margin-bottom:.6rem;color:var(--stone)}
+.card-excerpt{font-size:.875rem;line-height:1.7;color:var(--mid);max-width:520px}
+.card-meta{font-size:.78rem;color:var(--mid);margin-top:.75rem;display:flex;gap:1rem}
+
+.card-arrow{font-size:1.5rem;color:var(--line);align-self:center;transition:color .2s}
+.post-card:hover .card-arrow{color:var(--terra)}
+
+.coming-post{padding:2.5rem 0;border-bottom:1px solid var(--line);opacity:.45}
+.coming-post:last-child{border-bottom:none}
+.coming-label{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);margin-bottom:.6rem;display:block}
+.coming-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--stone);margin-bottom:.4rem}
+.coming-desc{font-size:.875rem;color:var(--mid);line-height:1.6}
+
+footer{background:var(--stone);color:rgba(245,240,232,.4);text-align:center;padding:1.5rem;font-size:.75rem;letter-spacing:.06em}
+
+@media(max-width:800px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .page-hero{padding:7rem 1.5rem 3rem}
+  h1{font-size:2.2rem}
+  .posts-wrap{padding:3rem 1.5rem 4rem}
+  .post-card{grid-template-columns:1fr}
+  .card-arrow{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Luka Morris Architects</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="services.html">Fees</a></li>
+    <li><a href="index.html#work">Work</a></li>
+    <li><a href="index.html#negreira">Casa Negreira</a></li>
+    <li><a href="journal.html" class="active">Journal</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="lbl">Journal</span>
+  <h1>Notes on rural Galicia</h1>
+  <p class="hero-sub">Guides, observations, and practical thinking on buying, renovating, and living with old buildings in Galicia and Asturias.</p>
+</div>
+
+<div class="posts-wrap">
+
+  <!-- Post 1 - live -->
+  <a href="post-buying-rural-stone-house-galicia.html" class="post-card">
+    <div>
+      <span class="card-tag">Buying Guide</span>
+      <div class="card-title">What to Look For When Buying a Rural Stone House in Galicia</div>
+      <p class="card-excerpt">Galicia's rural stone houses have a way of getting under your skin. Knowing the difference between a building that rewards patience and one that tests it is the whole game. A practical guide to structural red flags, planning constraints, and legal checks.</p>
+      <div class="card-meta">
+        <span>March 2026</span>
+        <span>12 min read</span>
+      </div>
+    </div>
+    <span class="card-arrow">→</span>
+  </a>
+
+  <!-- Coming soon posts -->
+  <div class="coming-post">
+    <span class="coming-label">Coming soon</span>
+    <div class="coming-title">How the Licencia de Obras Works in Galicia</div>
+    <p class="coming-desc">A plain-English guide to the Spanish planning permission process: obra menor vs. obra mayor, what documents you need, realistic timescales, and the mistakes that slow everything down.</p>
+  </div>
+
+  <div class="coming-post">
+    <span class="coming-label">Coming soon</span>
+    <div class="coming-title">Casa Negreira: Why We Chose Lime Mortar and Exposed Stone</div>
+    <p class="coming-desc">The material decisions behind the Negreira renovation, and why the instinct to insulate, render, and seal a traditional stone building is usually the wrong one.</p>
+  </div>
+
+  <div class="coming-post">
+    <span class="coming-label">Coming soon</span>
+    <div class="coming-title">The Difference Between an Arquitecto and an Aparejador in Spain</div>
+    <p class="coming-desc">Two professional roles, two different functions, and why you almost certainly need both for any significant renovation project in Galicia.</p>
+  </div>
+
+  <div class="coming-post">
+    <span class="coming-label">Coming soon</span>
+    <div class="coming-title">Five Things UK Buyers Get Wrong When Renovating in Spain</div>
+    <p class="coming-desc">From skipping the licencia to applying UK specification thinking to Galician materials: the recurring mistakes, and how to avoid them.</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Luka Morris Architects · ARB Registered · Negreira, Galicia · Serving Galicia &amp; Asturias
+</footer>
+
+</body>
+</html>
