@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galicia &amp; Asturias — Luka Morris Architects</title>
+<meta name="description" content="UK-trained ARB-registered architect based in Negreira, Galicia. Pre-purchase surveys, design, project management and remote consultancy for international buyers of rural properties in Galicia and Asturias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --stone:#2c2825;
+  --warm:#f5f0e8;
+  --terra:#a0522d;
+  --mid:#8a7f72;
+  --line:#d8cfc4;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--warm);color:var(--stone);font-family:var(--sans);font-weight:300}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:var(--warm);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:500;letter-spacing:.02em;text-decoration:none;color:var(--stone)}
+.nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
+.nav-links a{text-decoration:none;color:var(--stone);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7;transition:opacity .2s}
+.nav-links a:hover,.nav-links a.active{opacity:1}
+.lang-btn{background:none;border:1px solid var(--line);padding:.3rem .7rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.08em;cursor:pointer;color:var(--stone);text-transform:uppercase;transition:all .2s}
+.lang-btn:hover{background:var(--stone);color:var(--warm)}
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:4.5rem}
+.hero-img{background:url('img_negreira_ext.jpg') center/cover no-repeat;min-height:60vh}
+.hero-content{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem}
+.badges{display:flex;gap:.75rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.badge{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .9rem;border:1px solid var(--line);color:var(--mid)}
+h1{font-family:var(--serif);font-size:3.2rem;font-weight:400;line-height:1.15;margin-bottom:1.5rem}
+.hero-sub{font-size:.95rem;line-height:1.7;color:var(--mid);max-width:480px;margin-bottom:2.5rem}
+.btn{display:inline-block;padding:.85rem 2rem;background:var(--stone);color:var(--warm);text-decoration:none;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s;border:none;cursor:pointer;font-family:var(--sans)}
+.btn:hover{background:var(--terra)}
+section{padding:6rem 4rem}
+.lbl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;display:block}
+h2{font-family:var(--serif);font-size:2.5rem;font-weight:400;margin-bottom:.75rem}
+.sub{color:var(--mid);font-size:.95rem;margin-bottom:3.5rem;max-width:520px}
+#services{background:#fff}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.card{border:1px solid var(--line);padding:2rem;display:flex;flex-direction:column}
+.card-tag{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:.75rem}
+.card h3{font-family:var(--serif);font-size:1.35rem;font-weight:400;margin-bottom:.75rem}
+.card p{font-size:.875rem;line-height:1.7;color:var(--mid);flex:1}
+.card-price{font-size:.75rem;color:var(--stone);border-top:1px solid var(--line);padding-top:.75rem;margin-top:1rem}
+.card-link{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--terra);text-decoration:none;display:inline-block;margin-top:.75rem}
+.card-link:hover{text-decoration:underline}
+#why{background:var(--stone);color:var(--warm)}
+#why h2,#why .lbl{color:var(--warm)}
+#why .lbl{color:var(--terra)}
+#why .sub{color:rgba(245,240,232,.6)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem}
+.why-item h4{font-family:var(--serif);font-size:1.15rem;font-weight:400;margin-bottom:.6rem}
+.why-item p{font-size:.875rem;line-height:1.7;color:rgba(245,240,232,.65)}
+.negreira-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.negreira-tag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;display:block}
+#negreira h2{font-family:var(--serif);font-size:2.2rem;font-weight:400;margin-bottom:1rem}
+.negreira-desc{font-size:.9rem;line-height:1.75;color:var(--mid);margin-bottom:2rem}
+.detail-list{list-style:none}
+.detail-list li{display:grid;grid-template-columns:1fr 2fr;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.85rem}
+.detail-list li:last-child{border-bottom:none}
+.dl{font-weight:500;color:var(--stone)}
+.dd{color:var(--mid);line-height:1.6}
+.negreira-img{width:100%;aspect-ratio:3/4;object-fit:cover}
+#capture{background:var(--terra);color:var(--warm);text-align:center;padding:5rem 4rem}
+#capture h2{color:var(--warm);font-family:var(--serif);font-size:2.2rem;font-weight:400;margin-bottom:.75rem}
+#capture p{color:rgba(245,240,232,.85);font-size:.95rem;max-width:500px;margin:0 auto 2rem}
+.capture-btn{display:inline-block;padding:.85rem 2.5rem;background:var(--stone);color:var(--warm);text-decoration:none;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;transition:background .2s;margin-top:.5rem}
+.capture-btn:hover{background:#1a1714}
+.capture-note{font-size:.75rem;color:rgba(245,240,232,.5);margin-top:1rem}
+#contact{background:#fff;text-align:center}
+#contact h2{font-family:var(--serif);font-size:2.8rem;font-weight:400;margin-bottom:1rem}
+.contact-body{color:var(--mid);font-size:.95rem;max-width:480px;margin:0 auto 2.5rem}
+.contact-email-el{font-family:var(--serif);font-size:1.4rem;color:var(--stone);display:block;margin-bottom:1rem;text-decoration:none}
+.contact-email-el:hover{color:var(--terra)}
+.contact-phone{display:block;font-size:1rem;color:var(--mid);margin-bottom:2rem;text-decoration:none}
+.contact-phone:hover{color:var(--terra)}
+.contact-meta{display:flex;justify-content:center;gap:2rem;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--mid);margin-top:2.5rem}
+footer{background:var(--stone);color:rgba(245,240,232,.4);text-align:center;padding:1.5rem;font-size:.75rem;letter-spacing:.06em}
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  #hero{grid-template-columns:1fr}
+  .hero-img{min-height:45vh;order:-1}
+  .hero-content{padding:3rem 1.5rem}
+  h1{font-size:2.2rem}
+  section{padding:4rem 1.5rem}
+  #capture{padding:4rem 1.5rem}
+  .negreira-grid{grid-template-columns:1fr}
+  .negreira-img{aspect-ratio:16/9}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo" data-en="Luka Morris Architects" data-es="Luka Morris Arquitectos">Luka Morris Architects</a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+    <li><a href="uk.html" data-en="UK" data-es="UK">UK</a></li>
+    <li><a href="galicia.html" class="active" data-en="Galicia" data-es="Galicia">Galicia</a></li>
+    <li><a href="journal.html" data-en="Journal" data-es="Diario">Journal</a></li>
+    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+    <li><button class="lang-btn" id="langBtn" onclick="toggleLang()">ES</button></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="badges">
+      <span class="badge" data-en="ARB — UK Registered" data-es="ARB — Certificado UK">ARB — UK Registered</span>
+      <span class="badge" data-en="Based in Negreira, Galicia" data-es="Con sede en Negreira, Galicia">Based in Negreira, Galicia</span>
+      <span class="badge" data-en="Galicia &amp; Asturias" data-es="Galicia &amp; Asturias">Galicia &amp; Asturias</span>
+    </div>
+    <h1 data-en="Architecture for rural Galicia &amp; Asturias" data-es="Arquitectura para la Galicia rural y Asturias">Architecture for rural Galicia &amp; Asturias</h1>
+    <p class="hero-sub" data-en="UK-trained architect based in Negreira — design, project management and pre-purchase consultancy for international buyers of rural properties across Galicia and Asturias." data-es="Arquitecto formado en el Reino Unido y basado en Negreira — diseño, gestión de proyectos y consultoría previa a la compra para compradores internacionales de propiedades rurales en Galicia y Asturias.">UK-trained architect based in Negreira — design, project management and pre-purchase consultancy for international buyers of rural properties across Galicia and Asturias.</p>
+    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" data-en="Book a free call →" data-es="Reservar llamada gratuita →">Book a free call →</a>
+  </div>
+</section>
+
+<section id="services">
+  <span class="lbl" data-en="What I offer" data-es="Lo que ofrezco">What I offer</span>
+  <h2 data-en="Services for foreign buyers &amp; rural property owners" data-es="Servicios para compradores extranjeros y propietarios rurales">Services for foreign buyers &amp; rural property owners</h2>
+  <p class="sub" data-en="All services delivered in English. Fixed fees agreed upfront." data-es="Todos los servicios en inglés. Honorarios fijos acordados por adelantado.">All services delivered in English. Fixed fees agreed upfront.</p>
+  <div class="services-grid">
+    <div class="card">
+      <p class="card-tag">Pre-Purchase</p>
+      <h3 data-en="Pre-Purchase Survey" data-es="Informe Previo a la Compra">Pre-Purchase Survey</h3>
+      <p data-en="Independent structural and condition assessment before you commit. Written report in English covering risks, costs, and planning constraints." data-es="Evaluación estructural independiente antes de comprometerse. Informe escrito en inglés sobre riesgos, costes y restricciones urbanísticas.">Independent structural and condition assessment before you commit. Written report in English covering risks, costs, and planning constraints.</p>
+      <p class="card-price" data-en="From €350 — written report within 5 working days" data-es="Desde €350 — informe en 5 días hábiles">From €350 — written report within 5 working days</p>
+    </div>
+    <div class="card">
+      <p class="card-tag">Design</p>
+      <h3 data-en="Design &amp; Consultancy" data-es="Diseño y Consultoría">Design &amp; Consultancy</h3>
+      <p data-en="Feasibility studies, spatial planning, and design proposals tailored to Galician and Asturian rural typologies." data-es="Estudios de viabilidad, planificación espacial y propuestas de diseño adaptadas a las tipologías rurales gallegas y asturianas.">Feasibility studies, spatial planning, and design proposals tailored to Galician and Asturian rural typologies.</p>
+      <p class="card-price" data-en="From €800 — feasibility to full design" data-es="Desde €800 — de viabilidad a diseño completo">From €800 — feasibility to full design</p>
+    </div>
+    <div class="card">
+      <p class="card-tag">On-Site</p>
+      <h3 data-en="Project Management" data-es="Gestión de Proyectos">Project Management</h3>
+      <p data-en="On-the-ground oversight of local contractors, budget control, and progress reporting in English — across Galicia and Asturias." data-es="Supervisión local de contratistas, control presupuestario e informes de avance en inglés — en toda Galicia y Asturias.">On-the-ground oversight of local contractors, budget control, and progress reporting in English — across Galicia and Asturias.</p>
+      <p class="card-price" data-en="From €400/month — monthly retainer" data-es="Desde €400/mes — contrato mensual">From €400/month — monthly retainer</p>
+    </div>
+    <div class="card">
+      <p class="card-tag">Regulatory</p>
+      <h3 data-en="Planning &amp; Licencias" data-es="Planificación y Licencias">Planning &amp; Licencias</h3>
+      <p data-en="Navigating Spanish licencia de obras, working with local aparejadores and partner architects for statutory sign-off." data-es="Tramitación de la licencia de obras española, trabajando con aparejadores locales y arquitectos colaboradores para la aprobación oficial.">Navigating Spanish licencia de obras, working with local aparejadores and partner architects for statutory sign-off.</p>
+      <p class="card-price" data-en="From €500 — includes coordination with aparejador" data-es="Desde €500 — incluye coordinación con aparejador">From €500 — includes coordination with aparejador</p>
+    </div>
+    <div class="card">
+      <p class="card-tag">Remote</p>
+      <h3 data-en="Remote Consultancy" data-es="Consultoría Remota">Remote Consultancy</h3>
+      <p data-en="Fixed-fee advisory for UK-based clients planning to buy, renovate, or manage a property in Galicia or Asturias — without needing to be on the ground. Calls, written reports, and ongoing support in English." data-es="Asesoramiento de precio fijo para clientes en el Reino Unido que planean comprar, reformar o gestionar una propiedad en Galicia o Asturias. Llamadas, informes escritos y soporte continuo en inglés.">Fixed-fee advisory for UK-based clients planning to buy, renovate, or manage a property in Galicia or Asturias — without needing to be on the ground. Calls, written reports, and ongoing support in English.</p>
+      <p class="card-price" data-en="From £150 per session — fixed-fee packages available" data-es="Desde £150 por sesión — paquetes de precio fijo disponibles">From £150 per session — fixed-fee packages available</p>
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="card-link" data-en="Book a call →" data-es="Reservar llamada →">Book a call →</a>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <span class="lbl" data-en="Why it matters" data-es="Por qué importa">Why it matters</span>
+  <h2 data-en="British standards. Local knowledge." data-es="Estándares británicos. Conocimiento local.">British standards. Local knowledge.</h2>
+  <p class="sub" data-en="Why a UK architect in rural Spain?" data-es="¿Por qué un arquitecto británico en la España rural?">Why a UK architect in rural Spain?</p>
+  <div class="why-grid">
+    <div class="why-item">
+      <h4 data-en="Bridging the language gap" data-es="Superando la barrera del idioma">Bridging the language gap</h4>
+      <p data-en="International buyers face a double challenge: a language barrier and an unfamiliar building culture. I bridge both." data-es="Los compradores internacionales se enfrentan a un doble reto: la barrera del idioma y una cultura constructiva desconocida. Yo sirvo de puente.">International buyers face a double challenge: a language barrier and an unfamiliar building culture. I bridge both.</p>
+    </div>
+    <div class="why-item">
+      <h4 data-en="Genuinely rural presence" data-es="Presencia genuinamente rural">Genuinely rural presence</h4>
+      <p data-en="Most English-speaking architects are city-based. I live rurally in Negreira and operate across Galicia and Asturias." data-es="La mayoría de los arquitectos de habla inglesa están en ciudades. Yo vivo en Negreira y trabajo en toda Galicia y Asturias.">Most English-speaking architects are city-based. I live rurally in Negreira and operate across Galicia and Asturias.</p>
+    </div>
+    <div class="why-item">
+      <h4 data-en="Network of local partners" data-es="Red de colaboradores locales">Network of local partners</h4>
+      <p data-en="I work with partner arquitectos for projects requiring Spanish statutory sign-off — British oversight with local compliance." data-es="Trabajo con arquitectos colaboradores para proyectos que requieren aprobación oficial española — supervisión británica con cumplimiento local.">I work with partner arquitectos for projects requiring Spanish statutory sign-off — British oversight with local compliance.</p>
+    </div>
+    <div class="why-item">
+      <h4 data-en="First-hand renovation experience" data-es="Experiencia de renovación propia">First-hand renovation experience</h4>
+      <p data-en="My own renovation of a rural stone house in Negreira gives me direct knowledge of local contractors, materials, and planning." data-es="Mi propia renovación de una casa de piedra rural en Negreira me da conocimiento directo de contratistas locales, materiales y planificación.">My own renovation of a rural stone house in Negreira gives me direct knowledge of local contractors, materials, and planning.</p>
+    </div>
+  </div>
+</section>
+
+<section id="negreira">
+  <div class="negreira-grid">
+    <div>
+      <span class="negreira-tag" data-en="Current project · Negreira, A Coruña, Galicia" data-es="Proyecto actual · Negreira, A Coruña, Galicia">Current project · Negreira, A Coruña, Galicia</span>
+      <h2 data-en="Casa Negreira" data-es="Casa Negreira">Casa Negreira</h2>
+      <p class="negreira-desc" data-en="A full rehabilitation of a derelict rural stone house in Negreira, Galicia. The project is both my own home and a live demonstration of the practice's approach to rural Galician architecture. Two-storey granite rubble masonry building, partially collapsed internally." data-es="Una rehabilitación completa de una casa de piedra rural en ruinas en Negreira, Galicia. El proyecto es tanto mi propia vivienda como una demostración en vivo del enfoque de la práctica. Edificio de mampostería de granito de dos plantas, con derrumbe parcial interior.">A full rehabilitation of a derelict rural stone house in Negreira, Galicia. The project is both my own home and a live demonstration of the practice's approach to rural Galician architecture. Two-storey granite rubble masonry building, partially collapsed internally.</p>
+      <ul class="detail-list">
+        <li><span class="dl" data-en="Terracotta tiles" data-es="Suelo de terracota">Terracotta tiles</span><span class="dd" data-en="Handmade terracotta floor tiles throughout the ground floor — connecting to Galician vernacular." data-es="Suelo de terracota artesanal en toda la planta baja — conectando con la tradición vernácula gallega.">Handmade terracotta floor tiles throughout the ground floor — connecting to Galician vernacular.</span></li>
+        <li><span class="dl" data-en="Double-height with skylight" data-es="Doble altura con lucernario">Double-height with skylight</span><span class="dd" data-en="New roof aperture over the principal living space, drawing light into the deep-plan masonry structure." data-es="Nueva apertura en cubierta sobre el salón principal, llevando luz al interior de la estructura de mampostería.">New roof aperture over the principal living space, drawing light into the deep-plan masonry structure.</span></li>
+        <li><span class="dl" data-en="Retained timber beam" data-es="Viga de madera conservada">Retained timber beam</span><span class="dd" data-en="Original timber ridge beam preserved — datum between old fabric and new intervention." data-es="La viga de cumbrera original conservada — umbral entre la fábrica antigua y la intervención nueva.">Original timber ridge beam preserved — datum between old fabric and new intervention.</span></li>
+        <li><span class="dl" data-en="Exposed stone walls" data-es="Muros de piedra vistos">Exposed stone walls</span><span class="dd" data-en="Internal stone faces cleaned and repointed with lime mortar. No render, no insulation board." data-es="Paramentos interiores limpiados y rejuntados con mortero de cal. Sin revestimiento, sin aislamiento.">Internal stone faces cleaned and repointed with lime mortar. No render, no insulation board.</span></li>
+        <li><span class="dl" data-en="Wall lights" data-es="Apliques murales">Wall lights</span><span class="dd" data-en="Warm wall-mounted lighting against bare stone — atmospheric, residential light." data-es="Iluminación mural cálida sobre la piedra vista — luz ambiental y residencial.">Warm wall-mounted lighting against bare stone — atmospheric, residential light.</span></li>
+      </ul>
+    </div>
+    <div><img class="negreira-img" src="img_negreira_ext.jpg" alt="Casa Negreira"></div>
+  </div>
+</section>
+
+<section id="capture">
+  <span class="lbl" style="color:rgba(245,240,232,.6)" data-en="Free resource" data-es="Recurso gratuito">Free resource</span>
+  <h2 data-en="Buying in Galicia? Start with this." data-es="¿Comprando en Galicia? Empieza aquí.">Buying in Galicia? Start with this.</h2>
+  <p data-en="Download the free Galicia Property Buyer's Checklist — 25 questions to ask before you make an offer, written by a UK architect based in Negreira." data-es="Descarga la lista de verificación gratuita para compradores en Galicia — 25 preguntas que debes hacer antes de hacer una oferta, escrita por un arquitecto británico en Negreira.">Download the free Galicia Property Buyer's Checklist — 25 questions to ask before you make an offer, written by a UK architect based in Negreira.</p>
+  <a href="https://raw.githubusercontent.com/Luka-Morris/lukamorrisarchitects/main/galicia_buyers_checklist.pdf" target="_blank" class="capture-btn" data-en="Download free guide →" data-es="Descargar guía gratuita →">Download free guide →</a>
+  <p class="capture-note" data-en="PDF — no sign-up required" data-es="PDF — sin registro">PDF — no sign-up required</p>
+</section>
+
+<section id="contact">
+  <span class="lbl" data-en="Get in touch" data-es="Contacto">Get in touch</span>
+  <h2 data-en="Buying or renovating in Galicia or Asturias?" data-es="¿Comprando o reformando en Galicia o Asturias?">Buying or renovating in Galicia or Asturias?</h2>
+  <p class="contact-body" data-en="Whether you're assessing a property before purchase, planning a full renovation, or simply need independent advice — get in touch." data-es="Ya sea que esté evaluando una propiedad, planificando una renovación o necesite asesoramiento independiente — póngase en contacto.">Whether you're assessing a property before purchase, planning a full renovation, or simply need independent advice — get in touch.</p>
+  <span id="em"></span>
+  <a href="tel:+447814906078" class="contact-phone">+44 7814 906078</a>
+  <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn" data-en="Book a call →" data-es="Reservar llamada →">Book a call →</a>
+  <div class="contact-meta">
+    <span data-en="ARB Registered: 114431D" data-es="Certificado ARB: 114431D">ARB Registered: 114431D</span>
+    <span data-en="Based in Negreira, Galicia" data-es="Con sede en Negreira, Galicia">Based in Negreira, Galicia</span>
+    <span data-en="Serving Galicia &amp; Asturias" data-es="Trabajando en Galicia y Asturias">Serving Galicia &amp; Asturias</span>
+  </div>
+</section>
+
+<footer>
+  <span data-en="© 2026 Luka Morris Architects · ARB Registered: 114431D · Negreira, Galicia · Serving Galicia &amp; Asturias" data-es="© 2026 Luka Morris Arquitectos · Certificado ARB: 114431D · Negreira, Galicia · Galicia y Asturias">© 2026 Luka Morris Architects · ARB Registered: 114431D · Negreira, Galicia · Serving Galicia &amp; Asturias</span>
+</footer>
+
+<script>
+(function(){
+  var u='luka',d='lukamorrisarchitects.com',e=u+'@'+d;
+  document.getElementById('em').innerHTML='<a href="mailto:'+e+'" class="contact-email-el">'+e+'</a>';
+})();
+var lang='en';
+function toggleLang(){
+  lang=lang==='en'?'es':'en';
+  document.querySelectorAll('[data-en]').forEach(function(el){
+    el.innerHTML=el.getAttribute('data-'+lang);
+  });
+  document.getElementById('langBtn').textContent=lang==='en'?'ES':'EN';
+  document.documentElement.lang=lang;
+}
+</script>
+</body>
+</html>
