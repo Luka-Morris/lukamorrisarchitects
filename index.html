@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Luka Morris Architects — UK Residential Architecture</title>
-<meta name="description" content="ARB-registered architect available across the UK — extensions, whole-house refurbishments, basement conversions, and listed buildings. Based in the Uk and Spain.">
+<meta name="description" content="ARB-registered architect available across the UK — extensions, whole-house refurbishments, basement conversions, and listed buildings. Based in Galicia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -58,7 +58,7 @@
   <div class="hero-text">
     <span class="hero-arb">ARB Registered — 114431D</span>
     <h1 class="hero-display">Thoughtful<br>residential<br><em>architecture.</em></h1>
-    <p class="hero-sub">London-trained architect based in the UK & Galicia, available in both — extensions, whole-house refurbishments, basement conversions, and listed buildings.</p>
+    <p class="hero-sub">London-trained architect based in Galicia, available across the UK — extensions, whole-house refurbishments, basement conversions, and listed buildings.</p>
     <div class="hero-cta">
       <a href="work.html" class="btn">View Work</a>
       <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn-outline">Book a Call →</a>
@@ -100,8 +100,8 @@
 <div class="about-strip">
   <div class="about-portrait"><img src="portrait.jpg" alt="Luka Morris, Architect ARB"></div>
   <div class="about-text">
-    <h2>London-trained.<br>Available nationwide.</h2>
-    <p>ARB-registered architect with experience in residential refurbishment, extensions, basement conversions, and listed buildings at Emrys Architects and Robert Barnes Architects in London. Based in Galicia and the UK, available for UK projects throughout the year — site visits monthly, remote design and coordination ongoing.</p>
+    <h2>London-trained.<br>Galicia-based.<br>Available nationwide.</h2>
+    <p>ARB-registered architect with experience in residential refurbishment, extensions, basement conversions, and listed buildings at Emrys Architects and Robert Barnes Architects in London. Based in Galicia since 2026, available for UK projects throughout the year — site visits monthly, remote design and coordination ongoing.</p>
     <div class="about-stats">
       <div><div class="stat-num">8+</div><div class="stat-label">Years in practice</div></div>
       <div><div class="stat-num">ARB</div><div class="stat-label">No. 114431D</div></div>
@@ -137,6 +137,29 @@
 (function(){
   var u='luka',d='lukamorrisarchitects.com',e=u+'@'+d;
   document.getElementById('em').innerHTML='<a href="mailto:'+e+'" class="contact-email-el">'+e+'</a>';
+})();
+</script>
+<div id="cursor-orb"></div>
+<script>
+(function(){
+  var orb=document.getElementById("cursor-orb");
+  if(!orb||window.matchMedia("(pointer:coarse)").matches)return;
+  var mx=0,my=0,ox=-200,oy=-200;
+  document.addEventListener("mousemove",function(e){
+    mx=e.clientX;my=e.clientY;
+    orb.classList.add("visible");
+  });
+  document.addEventListener("mouseleave",function(){orb.classList.remove("visible");});
+  document.querySelectorAll("a,button,.work-card,.service-item").forEach(function(el){
+    el.addEventListener("mouseenter",function(){orb.classList.add("large");});
+    el.addEventListener("mouseleave",function(){orb.classList.remove("large");});
+  });
+  function tick(){
+    ox+=(mx-ox)*.1;oy+=(my-oy)*.1;
+    orb.style.left=ox+"px";orb.style.top=oy+"px";
+    requestAnimationFrame(tick);
+  }
+  tick();
 })();
 </script>
 </body>

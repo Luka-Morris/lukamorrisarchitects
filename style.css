@@ -92,6 +92,28 @@ details.expand .expand-content{margin-top:2rem}
 .meta-table td:first-child{width:38%;color:var(--mid);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;padding-right:1rem}
 .meta-table td:last-child{color:var(--black);font-weight:400}
 
+/* CURSOR ORB — desktop only */
+@media(pointer:fine){
+  #cursor-orb{
+    position:fixed;
+    width:22px;height:22px;
+    background:rgba(243,146,0,.28);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+    box-shadow:0 0 18px 6px rgba(243,146,0,.12);
+    transition:width .18s ease,height .18s ease,background .18s ease,opacity .35s ease;
+    opacity:0;
+  }
+  #cursor-orb.visible{opacity:1}
+  #cursor-orb.large{
+    width:42px;height:42px;
+    background:rgba(243,146,0,.12);
+    box-shadow:0 0 28px 10px rgba(243,146,0,.08);
+  }
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}

@@ -208,5 +208,28 @@
   document.getElementById('em').innerHTML='<a href="mailto:'+e+'" class="contact-email-el">'+e+'</a>';
 })();
 </script>
+<div id="cursor-orb"></div>
+<script>
+(function(){
+  var orb=document.getElementById("cursor-orb");
+  if(!orb||window.matchMedia("(pointer:coarse)").matches)return;
+  var mx=0,my=0,ox=-200,oy=-200;
+  document.addEventListener("mousemove",function(e){
+    mx=e.clientX;my=e.clientY;
+    orb.classList.add("visible");
+  });
+  document.addEventListener("mouseleave",function(){orb.classList.remove("visible");});
+  document.querySelectorAll("a,button,.work-card,.service-item").forEach(function(el){
+    el.addEventListener("mouseenter",function(){orb.classList.add("large");});
+    el.addEventListener("mouseleave",function(){orb.classList.remove("large");});
+  });
+  function tick(){
+    ox+=(mx-ox)*.1;oy+=(my-oy)*.1;
+    orb.style.left=ox+"px";orb.style.top=oy+"px";
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
 </body>
 </html>
