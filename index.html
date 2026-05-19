@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luka Morris Architects — UK Residential Architecture</title>
+<meta name="description" content="ARB-registered architect available across the UK — extensions, whole-house refurbishments, basement conversions, and listed buildings. Based in Galicia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+#hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:4.5rem}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:5rem 4rem}
+.hero-display{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,4.5vw,5rem);font-weight:800;letter-spacing:-.03em;line-height:1.0;color:#111;margin-bottom:2rem}
+.hero-display em{font-style:normal;color:#F39200}
+.hero-arb{display:inline-flex;align-items:center;gap:.6rem;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#888;margin-bottom:2rem}
+.hero-arb::before{content:'';display:inline-block;width:1.5rem;height:1px;background:#F39200}
+.hero-sub{font-size:.88rem;line-height:1.75;color:#888;max-width:380px;margin-bottom:2.5rem;font-weight:300}
+.hero-cta{display:flex;gap:1.25rem;align-items:center;flex-wrap:wrap}
+.hero-img{overflow:hidden;background:#eee}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+#projects{padding:5rem 4rem}
+#projects .section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem}
+.about-strip{background:#111;display:grid;grid-template-columns:220px 1fr;gap:5rem;align-items:start;padding:5rem 4rem}
+.about-portrait{width:220px;overflow:hidden;flex-shrink:0}
+.about-portrait img{width:100%;display:block}
+.about-text h2{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.2;margin-bottom:1.5rem}
+.about-text p{font-size:.875rem;line-height:1.85;color:rgba(255,255,255,.55);max-width:480px;margin-bottom:2rem;font-weight:300}
+.about-stats{display:flex;gap:3rem;flex-wrap:wrap}
+.stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:#fff;line-height:1}
+.stat-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:.3rem}
+@media(max-width:900px){
+  #hero{grid-template-columns:1fr}
+  .hero-img{min-height:55vh;order:-1}
+  .hero-text{padding:3rem 1.5rem}
+  .hero-display{font-size:2.4rem}
+  #projects{padding:3.5rem 1.5rem}
+  #projects .section-head{flex-direction:column;align-items:flex-start;gap:1rem}
+  .about-strip{grid-template-columns:1fr;padding:3rem 1.5rem;gap:2.5rem}
+  .about-portrait{width:100px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Luka Morris Architects</a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="spain.html">Spain</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-text">
+    <span class="hero-arb">ARB Registered — 114431D</span>
+    <h1 class="hero-display">Thoughtful<br>residential<br><em>architecture.</em></h1>
+    <p class="hero-sub">London-trained architect based in Galicia, available across the UK — extensions, whole-house refurbishments, basement conversions, and listed buildings.</p>
+    <div class="hero-cta">
+      <a href="work.html" class="btn">View Work</a>
+      <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn-outline">Book a Call →</a>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="hero-beverley.jpg" alt="4 Beverley Road — open plan living with rooflights, Barnes">
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="projects">
+  <div class="section-head">
+    <span class="lbl" style="margin-bottom:0">Selected Work</span>
+    <a href="work.html" class="btn-outline" style="white-space:nowrap">All Work →</a>
+  </div>
+  <div class="work-grid-3">
+    <a href="work.html#beverley-road" class="work-card">
+      <div class="work-card-img"><img src="bev-living.jpg" alt="4 Beverley Road"></div>
+      <span class="work-card-label">Residential · Barnes, London</span>
+      <div class="work-card-title">4 Beverley Road</div>
+    </a>
+    <a href="work.html#florian-road" class="work-card">
+      <div class="work-card-img"><img src="fr-kitchen.webp" alt="24 Florian Road"></div>
+      <span class="work-card-label">Residential · Putney, London</span>
+      <div class="work-card-title">24 Florian Road</div>
+    </a>
+    <a href="work.html#hill-street" class="work-card">
+      <div class="work-card-img"><img src="hs-facade.jpg" alt="22 Hill Street"></div>
+      <span class="work-card-label">Heritage · Mayfair, London</span>
+      <div class="work-card-title">22 Hill Street</div>
+    </a>
+  </div>
+</section>
+
+<hr class="rule">
+
+<div class="about-strip">
+  <div class="about-portrait"><img src="portrait.jpg" alt="Luka Morris, Architect ARB"></div>
+  <div class="about-text">
+    <h2>London-trained.<br>Galicia-based.<br>Available nationwide.</h2>
+    <p>ARB-registered architect with experience in residential refurbishment, extensions, basement conversions, and listed buildings at Emrys Architects and Robert Barnes Architects in London. Based in Galicia since 2026, available for UK projects throughout the year — site visits monthly, remote design and coordination ongoing.</p>
+    <div class="about-stats">
+      <div><div class="stat-num">8+</div><div class="stat-label">Years in practice</div></div>
+      <div><div class="stat-num">ARB</div><div class="stat-label">No. 114431D</div></div>
+      <div><div class="stat-num">UK</div><div class="stat-label">Nationwide</div></div>
+    </div>
+  </div>
+</div>
+
+<hr class="rule">
+
+<section id="contact">
+  <span class="lbl">Get in Touch</span>
+  <h2>Start a conversation.</h2>
+  <p class="contact-sub">Whether you're planning a project or want to understand your options — the first conversation is always free.</p>
+  <span id="em"></span>
+  <div class="contact-cta">
+    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn">Book a Call →</a>
+    <a href="services.html" class="btn-outline">View Services</a>
+  </div>
+  <div class="contact-meta">
+    <span>ARB Registered: 114431D</span>
+    <span>Negreira, Galicia</span>
+    <span>Available UK Nationwide</span>
+  </div>
+</section>
+
+<footer>
+  © 2026 Luka Morris Architects · ARB Registered: 114431D · Negreira, Galicia
+  &nbsp;·&nbsp; <a href="journal.html">Journal</a>
+</footer>
+
+<script>
+(function(){
+  var u='luka',d='lukamorrisarchitects.com',e=u+'@'+d;
+  document.getElementById('em').innerHTML='<a href="mailto:'+e+'" class="contact-email-el">'+e+'</a>';
+})();
+</script>
+</body>
+</html>
