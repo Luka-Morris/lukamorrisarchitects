@@ -17,7 +17,8 @@ a{color:inherit}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 4rem;background:var(--white);border-bottom:1px solid var(--grey)}
-.nav-logo{font-family:var(--syne);font-size:.95rem;font-weight:600;letter-spacing:-.01em;text-decoration:none;color:var(--black)}
+.nav-logo{text-decoration:none;display:flex;align-items:center}
+.nav-logo img{height:26px;width:auto;display:block}
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);transition:color .2s}
 .nav-links a:hover{color:var(--black)}

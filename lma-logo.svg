@@ -1,0 +1,10 @@
+<svg viewBox="0 0 2119 377" xmlns="http://www.w3.org/2000/svg">
+  <!-- L amber -->
+  <path d="M 0 0 L 155 0 L 155 265 L 489 265 L 489 375 L 0 375 Z" fill="#F39200"/>
+  <!-- M black — rectangle with V notch from top -->
+  <path d="M 554 0 L 704 0 L 978 283 L 1248 0 L 1402 0 L 1402 375 L 554 375 Z" fill="#111111"/>
+  <!-- A black — triangle with combined inner counter + open bottom hole -->
+  <path fill-rule="evenodd" fill="#111111"
+    d="M 1448 375 L 1783 0 L 2117 375 Z
+       M 1628 375 L 1708 231 L 1783 118 L 1858 231 L 1928 375 Z"/>
+</svg>
