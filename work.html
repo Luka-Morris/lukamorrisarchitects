@@ -63,7 +63,15 @@
     <li><a href="spain.html">Spain</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="hamburger" id="menuBtn" aria-label="Open menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="services.html">Services</a>
+  <a href="spain.html">Spain</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <div id="work-header">
   <span class="lbl">Portfolio</span>
@@ -263,6 +271,24 @@
   &nbsp;·&nbsp; <a href="journal.html">Journal</a>
 </footer>
 
+<script>
+function toggleMenu(){
+  document.getElementById('menuBtn').classList.toggle('open');
+  document.getElementById('navMobile').classList.toggle('open');
+}
+document.querySelectorAll('.nav-mobile a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('menuBtn').classList.remove('open');
+    document.getElementById('navMobile').classList.remove('open');
+  });
+});
+(function(){
+  var p=window.location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){
+    if(a.getAttribute('href')===p)a.style.color='#F39200';
+  });
+})();
+</script>
 <script>
 (function(){
   var u='luka',d='lukamorrisarchitects.com',e=u+'@'+d;
