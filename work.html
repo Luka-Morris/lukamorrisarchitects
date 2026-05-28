@@ -5,8 +5,8 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work — Luka Morris Architects</title>
-<meta name="description" content="Selected architectural projects — residential refurbishment, extensions, and listed buildings. 4 Beverley Road, 24 Florian Road, 22 Hill Street.">
+<title>Residential Architecture Projects in London | Luka Morris Architects</title>
+<meta name="description" content="Explore residential refurbishment, extension and heritage architecture projects in Barnes, Putney and Mayfair, including planning, interiors and listed building work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -26,7 +26,7 @@
 .project-desc{font-size:.88rem;line-height:1.85;color:#444;font-weight:300}
 .project-desc p{margin-bottom:1rem}
 .project-desc p:last-child{margin-bottom:0}
-.project-note{font-size:.72rem;color:#888;font-style:italic;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #E8E8E8}
+.project-note{font-size:.82rem;color:#666;font-style:italic;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #E8E8E8}
 .gallery-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:1rem}
 .gallery-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1rem}
 .gallery-1{margin-bottom:1rem}
@@ -37,6 +37,14 @@
 .drawing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .drawing-grid img{width:100%;display:block;height:auto;border:1px solid #E8E8E8}
 .drawing-caption{font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:#aaa;margin-top:.4rem}
+details.expand{margin-top:2rem;border-top:2px solid #111}
+details.expand summary{font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:1.1rem 0;cursor:pointer;display:flex;align-items:center;gap:.75rem;list-style:none;color:#111}
+details.expand summary::-webkit-details-marker{display:none}
+details.expand summary::before{content:'';display:inline-block;width:1.5rem;height:1px;background:#F39200}
+details.expand summary::after{content:'+';font-size:1.1rem;font-weight:400;color:#F39200;margin-left:auto}
+details.expand[open] summary::after{content:'×'}
+details.expand[open] summary{border-bottom:1px solid #E8E8E8;margin-bottom:2rem}
+.expand-content{padding-bottom:1rem}
 #misc{padding:5rem 4rem;background:#F7F7F7}
 .misc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
 .misc-grid img{width:100%;height:auto;display:block;border:1px solid #E8E8E8}
@@ -89,9 +97,9 @@
   <div class="project-lead"><img src="hero-beverley.jpg" alt="4 Beverley Road — open plan living with mustard sofa and exposed brick"></div>
   <div class="project-body">
     <div class="project-desc">
-      <p>A major refurbishment and partial rebuild of a semi-detached house in Barnes. The ground floor was extended and entirely reorganised to create a continuous open living space for the whole family — kitchen, dining, and sitting zones defined by ceiling changes and large rooflights rather than walls.</p>
+      <p>A major refurbishment and partial rebuild of a semi-detached house in Barnes. The ground floor was extended and entirely reorganised to create a continuous open living space for the whole family, with kitchen, dining, and sitting zones defined by ceiling changes and large rooflights rather than walls.</p>
       <p>A polished concrete floor runs uninterrupted from inside to garden, dissolving the threshold between the two. The project involved complex party wall negotiations with three adjoining neighbours and the introduction of a structural steel frame to achieve the open plan. High-end kitchen and bathroom specification throughout.</p>
-      <p>The upper floors were retained largely as existing, concentrating the intervention — and the budget — where it would have the most impact on daily family life.</p>
+      <p>The upper floors were retained largely as existing, concentrating the intervention (and budget) where it would have the most impact on family life.</p>
       <p class="project-note">With Robert Barnes Architects, London</p>
     </div>
     <div>
@@ -119,9 +127,9 @@
       </div>
       <span class="lbl" style="margin-bottom:1.5rem">Process &amp; Drawings</span>
       <div class="drawing-grid">
-        <div><img src="bev-iso.webp" alt="Axonometric study"><div class="drawing-caption">Spatial study — isometric</div></div>
-        <div><img src="bev-plans.webp" alt="Proposed floor plans"><div class="drawing-caption">Proposed plans — all floors</div></div>
-        <div><img src="bev-sketch-a.webp" alt="Interior perspective sketch"><div class="drawing-caption">Sketch — kitchen looking out</div></div>
+        <div><img src="bev-iso.webp" alt="Axonometric study"><div class="drawing-caption">Spatial study: isometric</div></div>
+        <div><img src="bev-plans.webp" alt="Proposed floor plans"><div class="drawing-caption">Proposed plans: all floors</div></div>
+        <div><img src="bev-sketch-a.webp" alt="Interior perspective sketch"><div class="drawing-caption">Sketch: kitchen looking out</div></div>
       </div>
     </div>
   </details>
@@ -137,9 +145,9 @@
   <div class="project-lead"><img src="fr-kitchen.webp" alt="24 Florian Road — kitchen and living wall"></div>
   <div class="project-body">
     <div class="project-desc">
-      <p>A whole-house refurbishment of a terraced property in Putney, sandwiched between a main road and an active tube line — a constraint that became the project's defining idea. The rear yard was enclosed by a new double-glazed glass box, creating a quiet, light-filled kitchen and living space that renders the railway invisible from within.</p>
-      <p>A narrow slot at the edge of the box accommodates a living green wall, providing biodiversity and herbs for a family who cook seriously. The glass box is visible from passing tube trains — a considered exchange between public infrastructure and private domesticity.</p>
-      <p>All original kitchen furniture from the client's previous home — cherry oak units — was disassembled and recut into new bespoke joinery pieces: a chair, a tallboy, fitted storage, and shelving, each designed to work within the new rooms. Nothing was wasted. The project achieves MVHR ventilation, photovoltaic panels, battery storage, and an air source heat pump, with monitoring estimating 70% renewable energy self-sufficiency.</p>
+      <p>A whole-house refurbishment of a terraced property in Putney, sandwiched between a main road and an active tube line, a constraint that became the project's defining idea. The rear yard was enclosed by a new double-glazed glass box, creating a quiet, light-filled kitchen and living space that renders the railway invisible from within.</p>
+      <p>A narrow slot at the edge of the box accommodates a living green wall, providing biodiversity and fresh herbs for a family who loves to cook. The glass box is visible from passing tube trains, a considered exchange between public infrastructure and private domesticity.</p>
+      <p>All original kitchen furniture from the client's previous home (cherry oak units) was disassembled and recut into new bespoke joinery pieces: a chair, a tallboy, fitted storage, and shelving, each designed to work within the new rooms. Nothing was wasted. The project achieves MVHR ventilation, photovoltaic panels, battery storage, and an air source heat pump, with monitoring estimating 70% renewable energy self-sufficiency.</p>
       <p class="project-note">With Robert Barnes Architects, London. Bespoke furniture designed in collaboration with the client.</p>
     </div>
     <div>
@@ -170,12 +178,12 @@
       </div>
       <span class="lbl" style="margin-bottom:1.5rem">Process &amp; Drawings</span>
       <div class="drawing-grid">
-        <div><img src="fr-elevation.webp" alt="Street elevation — site context with railway"><div class="drawing-caption">Street elevation — site context</div></div>
-        <div><img src="fr-conservatory.webp" alt="Interior elevation — glass box conservatory"><div class="drawing-caption">Interior elevation — conservatory</div></div>
+        <div><img src="fr-elevation.webp" alt="Street elevation — site context with railway"><div class="drawing-caption">Street elevation: site context</div></div>
+        <div><img src="fr-conservatory.webp" alt="Interior elevation — glass box conservatory"><div class="drawing-caption">Interior elevation: conservatory</div></div>
         <div><img src="fr-plans.webp" alt="Proposed floor plans"><div class="drawing-caption">Proposed plans</div></div>
-        <div><img src="fr-chair.webp" alt="Sketch — The Chair"><div class="drawing-caption">Furniture study — The Chair</div></div>
+        <div><img src="fr-chair.webp" alt="Sketch — The Chair"><div class="drawing-caption">Furniture study: The Chair</div></div>
         <div><img src="fr-stair-sk-a.webp" alt="Staircase detail sketch"><div class="drawing-caption">Staircase detail</div></div>
-        <div><img src="fr-tallboy.webp" alt="Sketch — The Tallboy"><div class="drawing-caption">Furniture study — The Tallboy</div></div>
+        <div><img src="fr-tallboy.webp" alt="Sketch — The Tallboy"><div class="drawing-caption">Furniture study: The Tallboy</div></div>
       </div>
     </div>
   </details>
@@ -191,7 +199,7 @@
   <div class="project-lead"><img src="hs-reception.jpg" alt="22 Hill Street — reception room with circular ceiling detail"></div>
   <div class="project-body">
     <div class="project-desc">
-      <p>A complete refurbishment of a six-storey Georgian townhouse in Mayfair for a new private client, targeting BREEAM Excellent — a rare and technically demanding certification for a listed building in a conservation area. The project required sensitive re-planning across CAT A shell-and-core and CAT B fit-out, working within strict heritage constraints while introducing contemporary services, raised access floors, and acoustic separation between tenancies.</p>
+      <p>A complete refurbishment of a six-storey Georgian townhouse in Mayfair for a new private client, targeting BREEAM Excellent, a rare and technically demanding certification for a listed building in a conservation area. The project required sensitive re-planning across CAT A shell-and-core and CAT B fit-out, working within strict heritage constraints while introducing contemporary services, raised access floors, and acoustic separation between tenancies.</p>
       <p>The main staircase was extended to the roof level with a new glazed panel above, drawing borrowed daylight deep into the historic stair core. The existing ornate balustrade, chandelier, and herringbone carpet runner were carefully retained, restated, and integrated into the new design. Bespoke timber shutters to all Georgian sash windows were drawn at detail level and fabricated by specialist joinery.</p>
       <p>A new courtyard at lower ground floor level was designed as a landscaped outdoor room accessible from multiple tenancies. A roof terrace at the upper levels adds amenity space with views across Mayfair.</p>
       <p class="project-note">With Emrys Architects, London. Images include visualisations produced during the design process alongside construction photography.</p>
@@ -225,7 +233,7 @@
       </div>
       <span class="lbl" style="margin-bottom:1.5rem">Process &amp; Drawings</span>
       <div class="drawing-grid">
-        <div><img src="hs-drawing-1.png" alt="Staircase 3D visual and sections"><div class="drawing-caption">Staircase — 3D study and sections</div></div>
+        <div><img src="hs-drawing-1.png" alt="Staircase 3D visual and sections"><div class="drawing-caption">Staircase: 3D study and sections</div></div>
         <div><img src="hs-shutter-1.png" alt="Georgian shutter details"><div class="drawing-caption">Georgian shutter joinery details</div></div>
       </div>
     </div>
@@ -256,7 +264,7 @@
   <p class="contact-sub">Get in touch to discuss your project. The first conversation is always free.</p>
   <span id="em"></span>
   <div class="contact-cta">
-    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn">Book a Call →</a>
+    <a href="https://calendly.com/luka-lukamorrisarchitects/30min" target="_blank" class="btn">Book a Free Call →</a>
     <a href="services.html" class="btn-outline">View Services</a>
   </div>
   <div class="contact-meta">
