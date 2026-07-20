@@ -49,11 +49,17 @@
 #capture p{font-size:.88rem;color:rgba(255,255,255,.8);max-width:440px;margin:0 auto 1.75rem;line-height:1.7}
 .capture-btn{display:inline-block;padding:.8rem 2rem;background:#111;color:#fff;text-decoration:none;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:opacity .2s}
 .capture-btn:hover{opacity:.8}
+#gallery{padding:0 4rem 5rem;background:#F7F7F7}
+#gallery .lbl{display:block;margin-bottom:1.5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
 @media(max-width:900px){
   #spain-hero{grid-template-columns:1fr}
   .spain-hero-img{min-height:45vh;order:-1}
   .spain-hero-text{padding:2.5rem 1.5rem}
   #intro,#negreira-section,#buyers-section{padding:3.5rem 1.5rem}
+  #gallery{padding:0 1.5rem 3.5rem}
+  .gallery-grid{grid-template-columns:1fr 1fr;gap:.75rem}
   .negreira-grid{grid-template-columns:1fr}
   #journal-link{padding:2.5rem 1.5rem;flex-direction:column;align-items:flex-start}
   #capture{padding:3rem 1.5rem}
@@ -111,9 +117,20 @@
       <p class="negreira-desc">Notes on the process: what we have learned, what we got wrong, what the planning system actually involves, are published in the journal.</p>
     </div>
     <div>
-      <img class="negreira-img" src="negreira-int-1.jpg" alt="Ground floor — stone walls as found">
-      <img class="negreira-img-2" src="negreira-int-2.jpg" alt="Upper floor — collapsed structure as found">
+      <img class="negreira-img" src="negreira-int-5.jpg" alt="Interior, double-height volume and stone gable as found">
+      <img class="negreira-img-2" src="negreira-int-4.jpg" alt="Upper floor, collapsed floor structure as found">
     </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <span class="lbl">As found</span>
+  <div class="gallery-grid">
+    <img src="negreira-ext-3.jpg" alt="Number 9, entrance door as found">
+    <img src="negreira-ext-2.jpg" alt="Street elevation as found">
+    <img src="negreira-ext-5.jpg" alt="Granite wall and ventilation opening">
+    <img src="negreira-int-3.jpg" alt="Ground floor, timber lintel and plank door as found">
+    <img src="negreira-ext-4.jpg" alt="Window frame detail as found">
   </div>
 </section>
 
